@@ -1,118 +1,38 @@
-/* 設定整個網頁的基礎樣式 */
-body {
-    font-family: '微軟正黑體', 'Arial', sans-serif;
-    background-color: #f0f8ff; /* 淺藍色背景 */
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-}
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>六年級數學闖關趣！</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="hidden">
+            <h1>🏆 六年級數學挑戰 🚀</h1>
+            <p class="score-display">累積總得分：<span id="score">0</span> 分</p>
+        </header>
 
-/* 整個測驗容器的樣式 */
-.container {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-}
+        <div id="home-page">
+            <h2>🎉 歡迎來到數學單元闖關區！</h2>
+            <p>請選擇你想挑戰的單元：</p>
+            <div id="unit-list" class="btn-grid">
+                </div>
+        </div>
 
-/* 標題樣式 */
-header h1 {
-    color: #ff6347; /* 亮紅色 */
-    font-size: 28px;
-    border-bottom: 3px solid #ff6347;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
+        <div id="quiz-box" class="hidden">
+            <div class="question-container">
+                <p id="question-text"></p>
+                <div id="image-area"></div>
+            </div>
 
-/* 得分顯示樣式 */
-.score-display {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #1e90ff; /* 藍色 */
-}
+            <div id="answer-buttons" class="btn-grid">
+                </div>
+        </div>
 
-/* 題目容器樣式 */
-.question-container {
-    background-color: #ffe4b5; /* 淺橘色背景 */
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-}
+        <div id="feedback-message" class="hidden"></div>
+    </div>
 
-#question-text {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    line-height: 1.5;
-}
-
-/* 按鈕群組的排版 */
-.btn-grid {
-    display: grid;
-    gap: 15px;
-    grid-template-columns: repeat(2, 1fr); /* 兩欄排版 */
-    margin-top: 20px;
-}
-
-/* 按鈕樣式 */
-.btn {
-    background-color: #4682b4; /* 鋼藍色 */
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background-color 0.2s;
-}
-
-/* 按鈕滑鼠移上時的顏色變化 */
-.btn:hover {
-    background-color: #5f9ea0;
-}
-
-/* 正確和錯誤的提示樣式 */
-.correct {
-    background-color: #3cb371 !important; /* 綠色 */
-}
-
-.wrong {
-    background-color: #dc143c !important; /* 紅色 */
-}
-
-/* 提示訊息區塊 */
-#feedback-message {
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 20px;
-    transition: opacity 0.5s;
-}
-
-/* 圓形圖形的簡單樣式（用於圓面積單元） */
-.circle-drawing {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%; /* 變成圓形 */
-    background-color: #87ceeb; /* 天藍色 */
-    border: 3px solid #4682b4;
-    margin: 15px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    color: #333;
-}
-
-/* 隱藏元素 */
-.hidden {
-    display: none !important;
-}
+    <script src="script.js"></script>
+</body>
+</html>
